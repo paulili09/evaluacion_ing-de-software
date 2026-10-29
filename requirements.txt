@@ -1,0 +1,3 @@
+django 
+psycog2-binary
+python-dotenv
