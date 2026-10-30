@@ -33,6 +33,7 @@ DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 ALLOWED_HOSTS = [host.strip() for host in os.getenv(
     'ALLOWED_HOSTS',
     'localhost,127.0.0.1,.vercel.app',
+    'evaluacioning-de-software-12ut.vercel.app',
 ).split(',') if host.strip()]
 CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in os.getenv(
     'CSRF_TRUSTED_ORIGINS',
