@@ -42,6 +42,7 @@ ALLOWED_HOSTS = [
     'evaluacioning-de-software-fvwa.vercel.app',
     'evaluacioning-de-software-w3ma.vercel.app',
     'evaluacioning-de-software.vercel.app',
+    'evaluacioning-de-software-3i74.vercel.app',
     'localhost',
     '127.0.0.1'
 ]
