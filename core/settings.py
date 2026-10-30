@@ -23,7 +23,6 @@ db_database = os.getenv("database")
 db_user = os.getenv("user")
 db_password = os.getenv("password")
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -32,19 +31,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-t(lp0bv@g#b9z$t@*#m45@tav94_5$k=*kli_wf^%navr9ho^$'
+SECRET_KEY = 'django-insecure-*3ro#sp5^id1c4p)gn+39d&eqqfhc1t&izwafckw621el4&#we'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [
     'back-end-evaluacion-2-kohk.vercel.app',
-    'evaluacioning-de-software-fvwa.vercel.app',
-    'evaluacioning-de-software-w3ma.vercel.app',
-    'evaluacioning-de-software.vercel.app',
-    'evaluacioning-de-software-3i74.vercel.app',
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    '.vercel.app'
 ]
 
 
@@ -57,7 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ecotech'
+    'ecotech',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +66,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'core.urls'
 
@@ -141,10 +138,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+
+# Email
+# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
 MAILERS = {
     'default': {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
-    },
+},
 }
