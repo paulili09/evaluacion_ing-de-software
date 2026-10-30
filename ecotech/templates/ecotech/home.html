@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoTech Solutions: soluciones digitales para operaciones más eficientes y sostenibles.">
+    <title>EcoTech Solutions</title>
+    <link rel="stylesheet" href="{% static 'ecotech/css/site.css' %}">
+</head>
+<body class="app-body">
+    <header class="app-header">
+        <a class="app-brand" href="{% url 'home' %}"><span class="brand-mark">E</span> EcoTech Solutions</a>
+        <nav class="app-nav" aria-label="Navegación principal">
+            <a class="is-active" href="{% url 'home' %}">Inicio</a>
+            <a href="{% url 'solutions' %}">Soluciones</a>
+            <a href="{% url 'process' %}">Proceso</a>
+            <a href="{% url 'about' %}">Nosotros</a>
+            <a href="{% url 'impact' %}">Impacto</a>
+            <a href="{% url 'resources' %}">Recursos</a>
+        </nav>
+        <a class="app-button app-button-dark" href="{% url 'contact' %}">Contactar</a>
+    </header>
+
+    <main>
+        <section class="app-hero app-container">
+            <div><p class="app-eyebrow">EcoTech Solutions / plataforma de trabajo</p><h1>Convierte tus retos operativos en soluciones que funcionan.</h1><p class="app-lead">Te ayudamos a ordenar procesos, usar mejor tus datos y construir herramientas digitales que tu equipo pueda utilizar desde el primer día.</p><div class="app-actions"><a class="app-button app-button-dark" href="{% url 'contact' %}">Cuéntanos tu reto</a><a class="app-link" href="{% url 'solutions' %}">Ver soluciones →</a></div></div>
+            <aside class="app-summary"><span class="app-summary-label">Punto de partida</span><strong>Un problema claro.</strong><p>Una conversación breve para definir el siguiente paso, sin comprometerte con una solución antes de entender el contexto.</p><a href="{% url 'process' %}">Conocer el proceso →</a></aside>
+        </section>
+
+        <section class="app-container app-section" aria-labelledby="services-title">
+            <div class="app-section-heading"><div><p class="app-eyebrow">Servicios</p><h2 id="services-title">Lo que podemos resolver contigo</h2></div><a class="app-link" href="{% url 'solutions' %}">Ver todos →</a></div>
+            <div class="app-service-grid">
+                <a class="app-service" href="{% url 'solutions' %}"><span>01</span><h3>Transformación digital</h3><p>Mapeo de procesos, diseño de herramientas y automatización de tareas repetitivas.</p><b>Explorar →</b></a>
+                <a class="app-service" href="{% url 'solutions' %}"><span>02</span><h3>Datos para decidir</h3><p>Paneles y sistemas de información para convertir datos dispersos en decisiones claras.</p><b>Explorar →</b></a>
+                <a class="app-service" href="{% url 'solutions' %}"><span>03</span><h3>Eficiencia sostenible</h3><p>Medición de oportunidades para reducir desperdicios y mejorar el impacto operativo.</p><b>Explorar →</b></a>
+            </div>
+        </section>
+
+        <section class="app-callout app-container"><div><p class="app-eyebrow">Siguiente paso</p><h2>¿Tienes un proyecto en mente?</h2></div><a class="app-button app-button-light" href="{% url 'contact' %}">Hablar con el equipo</a></section>
+    </main>
+    <footer class="app-footer app-container"><span>© 2026 EcoTech Solutions</span><a href="{% url 'contact' %}">hola@ecotech.solutions</a></footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoTech Solutions: soluciones digitales para operaciones más eficientes y sostenibles.">
+    <title>{{ page_title }} | EcoTech Solutions</title>
+    <link rel="stylesheet" href="{% static 'ecotech/css/site.css' %}">
+</head>
+<body class="app-body">
+    <header class="app-header">
+        <a class="app-brand" href="{% url 'home' %}"><span class="brand-mark">E</span> EcoTech Solutions</a>
+        <nav class="app-nav" aria-label="Navegación principal">
+            <a href="{% url 'home' %}">Inicio</a><a class="{% if page == 'solutions' %}is-active{% endif %}" href="{% url 'solutions' %}">Soluciones</a><a class="{% if page == 'process' %}is-active{% endif %}" href="{% url 'process' %}">Proceso</a><a class="{% if page == 'about' %}is-active{% endif %}" href="{% url 'about' %}">Nosotros</a><a class="{% if page == 'impact' %}is-active{% endif %}" href="{% url 'impact' %}">Impacto</a><a class="{% if page == 'resources' %}is-active{% endif %}" href="{% url 'resources' %}">Recursos</a>
+        </nav>
+        <a class="app-button app-button-dark" href="{% url 'contact' %}">Contactar</a>
+    </header>
+
+    <main class="app-container app-page">
+        {% if page == 'solutions' %}
+            <p class="app-eyebrow">Servicios</p><h1>Soluciones pensadas para problemas concretos.</h1><p class="app-lead">Empezamos por entender tu operación y terminamos con herramientas que tu equipo puede mantener y mejorar.</p>
+            <div class="app-detail-grid"><article><span>01</span><h2>Transformación digital</h2><p>Diagnóstico de procesos, diseño de producto y automatización para reducir fricción en el trabajo diario.</p><a href="{% url 'contact' %}">Solicitar diagnóstico →</a></article><article><span>02</span><h2>Datos para decidir</h2><p>Organizamos fuentes de información y construimos paneles que muestran lo importante en el momento correcto.</p><a href="{% url 'contact' %}">Hablar sobre datos →</a></article><article><span>03</span><h2>Eficiencia sostenible</h2><p>Identificamos desperdicios, definimos indicadores y hacemos visible el impacto de cada mejora.</p><a href="{% url 'contact' %}">Medir una oportunidad →</a></article></div>
+        {% elif page == 'process' %}
+            <p class="app-eyebrow">Cómo trabajamos</p><h1>Un proceso corto, visible y colaborativo.</h1><p class="app-lead">Cada etapa termina con una decisión concreta para que el proyecto avance sin reuniones innecesarias.</p>
+            <ol class="app-process"><li><span>01</span><div><h2>Entender</h2><p>Conversamos con las personas involucradas y documentamos el problema real.</p></div></li><li><span>02</span><div><h2>Priorizar</h2><p>Elegimos el cambio con mayor impacto y acordamos cómo sabremos que funcionó.</p></div></li><li><span>03</span><div><h2>Construir</h2><p>Probamos una solución pequeña, recibimos feedback y mejoramos con evidencia.</p></div></li><li><span>04</span><div><h2>Transferir</h2><p>Dejamos documentación, métricas y autonomía para que tu equipo continúe.</p></div></li></ol><a class="app-button app-button-dark" href="{% url 'contact' %}">Iniciar conversación</a>
+        {% elif page == 'about' %}
+            <p class="app-eyebrow">El equipo</p><h1>Experiencia técnica con trato humano.</h1><p class="app-lead">EcoTech Solutions reúne estrategia, diseño y desarrollo para acompañar cambios que necesitan durar.</p><div class="app-detail-grid"><article><span>Cómo pensamos</span><h2>Primero el contexto</h2><p>No recomendamos herramientas antes de entender a las personas, las restricciones y el resultado esperado.</p></article><article><span>Cómo decidimos</span><h2>Con evidencia</h2><p>Probamos temprano, medimos lo que importa y hacemos visibles los compromisos de cada decisión.</p></article><article><span>Cómo acompañamos</span><h2>Hasta la autonomía</h2><p>El objetivo no es crear dependencia: dejamos capacidades para que el equipo pueda continuar.</p></article></div><a class="app-button app-button-dark" href="{% url 'contact' %}">Conocer al equipo</a>
+        {% elif page == 'impact' %}
+            <p class="app-eyebrow">Resultados</p><h1>El impacto se demuestra en el trabajo diario.</h1><p class="app-lead">Medimos mejoras que las personas pueden sentir: menos tareas repetidas, información más clara y decisiones más rápidas.</p><div class="app-metrics"><div><strong>42%</strong><span>menos tiempo en procesos repetitivos</span></div><div><strong>60+</strong><span>proyectos acompañados</span></div><div><strong>24</strong><span>sectores con necesidades distintas</span></div></div><a class="app-button app-button-dark" href="{% url 'solutions' %}">Ver qué podemos medir</a>
+        {% elif page == 'resources' %}
+            <p class="app-eyebrow">Recursos prácticos</p><h1>Herramientas para ordenar el próximo paso.</h1><p class="app-lead">Material breve para preparar conversaciones y tomar mejores decisiones antes de construir.</p><div class="app-resource-list"><article><span>Guía</span><div><h2>Diagnóstico de procesos</h2><p>Preguntas para encontrar dónde se pierde tiempo y qué conviene mejorar primero.</p></div><a href="{% url 'contact' %}">Pedir guía →</a></article><article><span>Checklist</span><div><h2>Proyecto digital listo</h2><p>Lista de condiciones mínimas para comenzar con objetivos, responsables y métricas.</p></div><a href="{% url 'contact' %}">Pedir checklist →</a></article></div>
+        {% else %}
+            <p class="app-eyebrow">Contacto</p><h1>Hablemos de un problema real.</h1><p class="app-lead">Déjanos tus datos y una breve descripción. Guardaremos tu solicitud para que nuestro equipo pueda responderte.</p><form class="app-form" method="post">{% csrf_token %}{% if form.non_field_errors %}<div class="form-errors">{{ form.non_field_errors }}</div>{% endif %}<fieldset><legend>Datos de contacto</legend><label for="{{ form.name.id_for_label }}">Nombre</label>{{ form.name }}{% for error in form.name.errors %}<small class="field-error">{{ error }}</small>{% endfor %}<label for="{{ form.email.id_for_label }}">Correo electrónico</label>{{ form.email }}{% for error in form.email.errors %}<small class="field-error">{{ error }}</small>{% endfor %}</fieldset><fieldset><legend>Tu proyecto</legend><label for="{{ form.message.id_for_label }}">¿Qué necesitas resolver?</label>{{ form.message }}{% for error in form.message.errors %}<small class="field-error">{{ error }}</small>{% endfor %}</fieldset><button class="app-button app-button-dark" type="submit">Enviar solicitud</button></form>
+        {% endif %}
+    </main>
+    <footer class="app-footer app-container"><span>© 2026 EcoTech Solutions</span><a href="{% url 'home' %}">Volver al inicio</a></footer>
+    {% if messages %}<div class="messages" aria-live="polite">{% for message in messages %}<p class="message {{ message.tags }}">{{ message }}</p>{% endfor %}</div>{% endif %}
+</body>
+</html>

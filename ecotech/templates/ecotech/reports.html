@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informes | EcoTech Solutions</title>
+    <link rel="stylesheet" href="{% static 'ecotech/css/site.css' %}">
+</head>
+<body class="app-body">
+    <header class="app-header">
+        <a class="app-brand" href="{% url 'home' %}"><span class="brand-mark">E</span> EcoTech Solutions</a>
+        <nav class="app-nav" aria-label="Navegación principal"><a href="{% url 'home' %}">Inicio</a><a class="is-active" href="{% url 'reports' %}">Informes</a><a href="/admin/">Administración</a></nav>
+        <a class="app-button app-button-dark" href="{% url 'contact' %}">Contactar</a>
+    </header>
+    <main class="app-container app-page report-page">
+        <p class="app-eyebrow">Control operativo</p><h1>Informe de horas trabajadas.</h1><p class="app-lead">Filtra por empleado, proyecto o periodo para revisar el historial registrado.</p>
+        <form class="report-filters" method="get"><div>{{ form.employee.label_tag }}{{ form.employee }}</div><div>{{ form.project.label_tag }}{{ form.project }}</div><div>{{ form.start_date.label_tag }}{{ form.start_date }}</div><div>{{ form.end_date.label_tag }}{{ form.end_date }}</div><button class="app-button app-button-dark" type="submit">Filtrar</button><a class="app-link" href="{% url 'reports' %}">Limpiar</a></form>
+        <div class="report-summary"><strong>{{ total_hours }} h</strong><span>total del periodo filtrado</span></div>
+        <div class="report-table-wrap"><table><thead><tr><th>Fecha</th><th>Empleado</th><th>Proyecto</th><th>Actividad</th><th>Horas</th></tr></thead><tbody>{% for log in logs %}<tr><td>{{ log.date|date:'d/m/Y' }}</td><td>{{ log.employee }}</td><td>{{ log.project }}</td><td>{{ log.activity }}</td><td>{{ log.hours }}</td></tr>{% empty %}<tr><td colspan="5">No hay registros para los filtros seleccionados.</td></tr>{% endfor %}</tbody></table></div>
+    </main>
+    <footer class="app-footer app-container"><span>© 2026 EcoTech Solutions</span><a href="{% url 'home' %}">Volver al inicio</a></footer>
+</body>
+</html>
