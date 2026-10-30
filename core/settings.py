@@ -10,12 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
-import os
 from pathlib import Path
 
+import os
 from dotenv import load_dotenv
 
 load_dotenv()
+
+db_host = os.getenv("host")
+db_port = os.getenv("port")
+db_database = os.getenv("database")
+db_user = os.getenv("user")
+db_password = os.getenv("password")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,18 +31,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv(
-    'SECRET_KEY',
-    'django-insecure-development-only-change-me',
-)
+SECRET_KEY = 'django-insecure-*3ro#sp5^id1c4p)gn+39d&eqqfhc1t&izwafckw621el4&#we'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
+DEBUG = True
 
-ALLOWED_HOSTS = [host.strip() for host in os.getenv(
-    'ALLOWED_HOSTS',
-    'localhost,127.0.0.1,.vercel.app',
-).split(',') if host.strip()]
+ALLOWED_HOSTS = [
+    'back-end-evaluacion-2.vercel.app',
+    'localhost',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -62,12 +66,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+
 ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -85,37 +91,16 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
-db_url = os.getenv('DATABASE_URL')
-db_database = os.getenv('database') or os.getenv('DB_NAME')
-db_user = os.getenv('user') or os.getenv('DB_USER')
-db_password = os.getenv('password') or os.getenv('DB_PASSWORD')
-db_host = os.getenv('host') or os.getenv('DB_HOST')
-db_port = os.getenv('port') or os.getenv('DB_PORT')
-
-if db_url:
-    import dj_database_url
-
-    DATABASES = {
-        'default': dj_database_url.parse(db_url, conn_max_age=600),
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': db_database,
+        'USER': db_user,
+        'PASSWORD': db_password,
+        'HOST': db_host,
+        'PORT': db_port
     }
-elif db_database:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': db_database,
-            'USER': db_user,
-            'PASSWORD': db_password,
-            'HOST': db_host,
-            'PORT': db_port,
-        }
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+}
 
 
 # Password validation
@@ -140,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.1/topics/i18n/
 
-LANGUAGE_CODE = 'es-es'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
@@ -152,17 +137,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
-STATIC_ROOT = BASE_DIR / 'staticfiles_build'
-STORAGES = {
-    'default': {
-        'BACKEND': 'django.core.files.storage.FileSystemStorage',
-    },
-    'staticfiles': {
-        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
-    },
-}
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 # Email
