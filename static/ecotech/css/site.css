@@ -1,3 +1,8 @@
+.app-proof { align-items: center; background: #2d2448; color: #fbfaff; display: grid; gap: 65px; grid-template-columns: 1fr 1fr; margin-bottom: 110px; padding-bottom: 65px; padding-top: 65px; position: relative; overflow: hidden; }
+.app-proof::after { border: 1px solid rgba(185,239,116,.45); border-radius: 50%; content: ''; height: 330px; position: absolute; right: -100px; top: -110px; width: 330px; }
+.app-proof-intro, .app-proof-stats { position: relative; z-index: 1; }
+.app-proof .app-eyebrow { color: #b9ef74; }.app-proof h2 { font: 500 42px/1 'Space Grotesk', sans-serif; letter-spacing: -1.5px; margin: 0; }.app-proof h2 em { color: #d7c3ff; font-family: Georgia, serif; font-weight: 400; }.app-proof-intro > p:last-child { color: #d9d0eb; font-size: 13px; line-height: 1.6; margin: 25px 0 0; max-width: 290px; }.app-proof-stats { border-left: 1px solid rgba(255,255,255,.25); display: grid; grid-template-columns: repeat(3, 1fr); }.app-proof-stats div { padding-left: 22px; }.app-proof-stats strong { color: #b9ef74; display: block; font: 600 42px 'Space Grotesk', sans-serif; }.app-proof-stats span { color: #d9d0eb; display: block; font-size: 11px; line-height: 1.4; margin-top: 8px; max-width: 80px; }
+@media (max-width: 760px) { .app-proof { display: block; margin-bottom: 65px; padding-bottom: 48px; padding-top: 48px; }.app-proof-stats { border-left: 0; border-top: 1px solid rgba(255,255,255,.25); gap: 10px; margin-top: 42px; padding-top: 25px; }.app-proof-stats div { padding-left: 0; } }
 /* Lavender botanical theme */
 body.app-body { background: #f3effb; color: #2d2448; }
 body.app-body .app-header { background: rgba(243,239,251,.94); border-bottom-color: #d9d0eb; }
