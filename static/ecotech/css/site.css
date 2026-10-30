@@ -1,3 +1,164 @@
+/* Lavender botanical theme */
+body.app-body { background: #f3effb; color: #2d2448; }
+body.app-body .app-header { background: rgba(243,239,251,.94); border-bottom-color: #d9d0eb; }
+body.app-body .app-brand, body.app-body .app-nav a:hover, body.app-body .app-nav a.is-active { color: #2d2448; }
+body.app-body .app-brand .brand-mark { background: #b9ef74; color: #2d2448; }
+body.app-body .app-nav a::after, body.app-body .app-nav a.is-active::after { background: #b9ef74; }
+body.app-body .app-button-dark { background: #2d2448; box-shadow: 4px 4px 0 #b9ef74; }
+body.app-body .app-button-dark:hover { background: #493b70; box-shadow: 2px 2px 0 #b9ef74; }
+body.app-body .app-hero { background-image: linear-gradient(90deg, rgba(45,36,72,.96) 0%, rgba(80,61,119,.84) 48%, rgba(80,61,119,.42) 100%), url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=2000&q=88'); color: #fbfaff; }
+body.app-body .app-hero::before { border-color: rgba(185,239,116,.55); }
+body.app-body .app-hero::after { background: #b9ef74; }
+body.app-body .app-hero h1, body.app-body .app-page h1 { color: #fbfaff; }
+body.app-body .app-hero h1 em, body.app-body .app-page h1 em { color: #d7c3ff; }
+body.app-body .app-hero .app-lead { color: #e4dcf2; }
+body.app-body .app-summary { background: rgba(45,36,72,.55); border-color: rgba(251,250,255,.55); color: #fbfaff; }
+body.app-body .app-summary::before { border-color: rgba(185,239,116,.45); }
+body.app-body .app-summary::after { border-color: #b9ef74; }
+body.app-body .app-summary-label { color: #b9ef74; }
+body.app-body .app-summary strong, body.app-body .app-summary a { color: #fbfaff; }
+body.app-body .app-summary p { color: #e4dcf2; }
+body.app-body .app-summary a { border-color: #b9ef74; }
+body.app-body .app-section, body.app-body .app-page { background: #f3effb; }
+body.app-body .app-section-heading { border-color: #d9d0eb; }
+body.app-body .app-section-heading h2, body.app-body .app-page h1 { color: #2d2448; }
+body.app-body .app-service, body.app-body .app-detail-grid article { border-color: #d9d0eb; color: #2d2448; }
+body.app-body .app-service:nth-child(1), body.app-body .app-detail-grid article:nth-child(1) { background: #2d2448; color: #fbfaff; }
+body.app-body .app-service:nth-child(2), body.app-body .app-detail-grid article:nth-child(2) { background: #dff3d0; color: #2d2448; }
+body.app-body .app-service:nth-child(3), body.app-body .app-detail-grid article:nth-child(3) { background: #e8ddff; color: #2d2448; }
+body.app-body .app-service p, body.app-body .app-detail-grid article p { color: #675b7f; }
+body.app-body .app-service:nth-child(1) p, body.app-body .app-detail-grid article:nth-child(1) p { color: #d9d0eb; }
+body.app-body .app-service:nth-child(2) p { color: #42633e; }
+body.app-body .app-service:nth-child(3) p { color: #5f4e82; }
+body.app-body .app-callout { background: linear-gradient(90deg, rgba(45,36,72,.96), rgba(80,61,119,.78)), url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1600&q=88') center/cover; }
+body.app-body .app-callout .app-eyebrow { color: #b9ef74; }
+body.app-body .app-button-light { background: #b9ef74; color: #2d2448; }
+body.app-body .app-page::before { background: #dff3d0; }
+body.app-body .app-page > .app-eyebrow::before { background: #b9ef74; }
+body.app-body .app-page > .app-lead { color: #675b7f; }
+body.app-body .app-process li, body.app-body .app-resource-list article { background: rgba(255,255,255,.72); border-color: #d9d0eb; }
+body.app-body .app-process li:hover, body.app-body .app-resource-list article:hover { background: #e8ddff; }
+body.app-body .app-process li > span, body.app-body .app-resource-list article > span { color: #7354a6; }
+body.app-body .app-metrics div { background: #2d2448; }
+body.app-body .app-metrics strong { color: #b9ef74; }
+body.app-body .app-form { background: #fffaff; border-color: #d9d0eb; }
+body.app-body .app-form input, body.app-body .app-form textarea { background: #f3effb; border-bottom-color: #b9a9d2; }
+body.app-body .app-footer { background: rgba(243,239,251,.8); border-top-color: #d9d0eb; color: #675b7f; }
+@media (max-width: 760px) { body.app-body .app-hero { background-image: linear-gradient(rgba(45,36,72,.88), rgba(45,36,72,.8)), url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1200&q=88'); } }
+/* Botanical full-bleed theme */
+body.app-body { background: #f5f2ea; background-image: none; color: #173b36; }
+body.app-body .app-header { background: rgba(245,242,234,.94); border-bottom: 1px solid #ded8ce; }
+body.app-body .app-hero { background-image: linear-gradient(90deg, rgba(14,48,41,.93) 0%, rgba(14,48,41,.82) 48%, rgba(14,48,41,.38) 100%), url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=2000&q=88'); background-position: center; background-size: cover; color: #fffdf9; min-height: 680px; padding-bottom: 150px; padding-top: 150px; }
+body.app-body .app-hero::before { border: 1px solid rgba(255,253,249,.35); border-radius: 50%; height: 420px; right: 12%; top: -150px; width: 420px; }
+body.app-body .app-hero::after { background: #ef8d68; border: 0; height: 14px; right: 26%; top: 24%; width: 14px; }
+body.app-body .app-hero h1 { color: #fffdf9; max-width: 700px; }
+body.app-body .app-hero h1 em { color: #ef8d68; }
+body.app-body .app-hero .app-lead { color: #d7e3dc; }
+body.app-body .app-summary { backdrop-filter: blur(8px); background: rgba(255,253,249,.14); border: 1px solid rgba(255,253,249,.45); box-shadow: none; color: #fffdf9; }
+body.app-body .app-summary::before { border-color: rgba(255,253,249,.25); }
+body.app-body .app-summary::after { border-color: #ef8d68; }
+body.app-body .app-summary-label, body.app-body .app-summary strong { color: #fffdf9; }
+body.app-body .app-summary p { color: #d7e3dc; }
+body.app-body .app-summary a { border-color: #ef8d68; color: #fffdf9; }
+body.app-body .app-section, body.app-body .app-page { background: #f5f2ea; }
+body.app-body .app-section { padding-bottom: 135px; padding-top: 105px; }
+body.app-body .app-section-heading { border-color: #ded8ce; }
+body.app-body .app-service, body.app-body .app-detail-grid article { background: #fffdf9; border: 1px solid #ded8ce; border-radius: 0; color: #173b36; min-height: 300px; }
+body.app-body .app-service:nth-child(1), body.app-body .app-detail-grid article:nth-child(1) { background: #173b36; color: #fffdf9; }
+body.app-body .app-service:nth-child(2), body.app-body .app-detail-grid article:nth-child(2) { background: #d7eadf; }
+body.app-body .app-service:nth-child(3), body.app-body .app-detail-grid article:nth-child(3) { background: #ef8d68; }
+body.app-body .app-service:nth-child(3) p, body.app-body .app-detail-grid article:nth-child(3) p { color: #285950; }
+body.app-body .app-callout { background: linear-gradient(90deg, rgba(14,48,41,.95), rgba(14,48,41,.72)), url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1600&q=88') center/cover; border-radius: 0; }
+body.app-body .app-page { padding-bottom: 135px; padding-top: 105px; }
+body.app-body .app-page::before { background: #d7eadf; }
+body.app-body .app-form, body.app-body .app-resource-list article, body.app-body .app-process li { background: #fffdf9; border: 1px solid #ded8ce; }
+body.app-body .app-metrics div { background: #173b36; }
+@media (max-width: 760px) { body.app-body .app-hero { min-height: 700px; padding-bottom: 90px; padding-top: 90px; } body.app-body .app-hero::before { height: 260px; right: -80px; top: -80px; width: 260px; } body.app-body .app-section, body.app-body .app-page { padding-bottom: 85px; padding-top: 75px; } }
+/* Botanical layout across the full page */
+body.app-body { background-color: #dcefe4; background-image: linear-gradient(rgba(220,239,228,.88), rgba(220,239,228,.93)), url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=2000&q=85'); background-attachment: fixed; background-position: center; background-size: cover; }
+body.app-body .app-header { background: rgba(220,239,228,.88); border-bottom-color: rgba(47,94,65,.2); }
+body.app-body .app-hero { background: rgba(220,239,228,.66); }
+body.app-body .app-section, body.app-body .app-page { background: rgba(220,239,228,.52); }
+body.app-body .app-section-heading { border-bottom-color: rgba(47,94,65,.25); }
+body.app-body .app-service:nth-child(3), body.app-body .app-detail-grid article:nth-child(3) { background: rgba(255,253,249,.84); }
+body.app-body .app-resource-list article, body.app-body .app-process li { background: rgba(255,253,249,.72); }
+body.app-body .app-footer { background: rgba(220,239,228,.78); border-top-color: rgba(47,94,65,.2); }
+body.app-body .app-hero { position: relative; }
+body.app-body .app-hero::before { background: linear-gradient(145deg, rgba(23,59,54,.9), rgba(23,59,54,.35)), url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1000&q=85') center/cover; border: 0; border-radius: 0 0 0 100%; height: 360px; opacity: .8; right: -80px; top: -30px; width: 420px; }
+body.app-body .app-hero::after { border: 1px solid rgba(239,141,104,.8); border-radius: 50%; background: transparent; height: 42px; right: 28%; top: 21%; width: 42px; }
+body.app-body .app-summary { background-image: linear-gradient(145deg, rgba(239,141,104,.94), rgba(239,141,104,.72)), url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85'); background-position: center; background-size: cover; }
+body.app-body .app-section-heading h2 { max-width: 600px; }
+body.app-body .app-service, body.app-body .app-detail-grid article { min-height: 320px; }
+body.app-body .app-service:nth-child(1) { background: linear-gradient(145deg, #173b36, #285950); }
+body.app-body .app-service:nth-child(2) { background: linear-gradient(145deg, #b9dfd0, #d9eee2); }
+body.app-body .app-service:nth-child(3) { background: linear-gradient(145deg, #fffdf9, #f1e9dd); }
+body.app-body .app-service h3, body.app-body .app-detail-grid article h2 { max-width: 250px; }
+body.app-body .app-callout { background: linear-gradient(105deg, #285950, #173b36 70%); }
+@media (max-width: 760px) { body.app-body .app-hero::before { border-radius: 0 0 0 60%; height: 230px; opacity: .5; right: -100px; top: -30px; width: 280px; } body.app-body .app-hero::after { right: 14%; top: 16%; } }
+/* Alternate visual theme */
+body.app-body { background: #f7f3eb; color: #173b36; background-image: none; }
+body.app-body .app-header { background: rgba(247,243,235,.96); border-bottom: 1px solid #ded8ce; }
+body.app-body .app-brand .brand-mark { background: #ef8d68; color: #173b36; }
+body.app-body .app-nav a { color: #6d7770; }
+body.app-body .app-nav a::after, body.app-body .app-nav a.is-active::after { background: #ef8d68; }
+body.app-body .app-nav a:hover, body.app-body .app-nav a.is-active { color: #173b36; }
+body.app-body .app-button-dark { background: #173b36; box-shadow: none; }
+body.app-body .app-button-dark:hover { background: #285950; }
+body.app-body .app-hero { background: #173b36; border-radius: 0; color: #f7f3eb; }
+body.app-body .app-hero::before { border-color: rgba(247,243,235,.2); }
+body.app-body .app-hero::after { background: #ef8d68; }
+body.app-body .app-hero h1 { color: #f7f3eb; }
+body.app-body .app-hero h1 em, body.app-body .app-page h1 em { color: #ef8d68; }
+body.app-body .app-hero .app-lead { color: #c9d8d0; }
+body.app-body .app-summary { background: #ef8d68; color: #173b36; box-shadow: none; }
+body.app-body .app-summary::before { border-color: rgba(23,59,54,.25); }
+body.app-body .app-summary::after { border-color: rgba(23,59,54,.5); }
+body.app-body .app-summary-label { color: #285950; }
+body.app-body .app-summary strong { color: #173b36; }
+body.app-body .app-summary p { color: #285950; }
+body.app-body .app-summary a { border-color: #173b36; color: #173b36; }
+body.app-body .app-section { background: #f7f3eb; }
+body.app-body .app-section-heading { border-color: #ded8ce; }
+body.app-body .app-section-heading h2, body.app-body .app-page h1 { color: #173b36; }
+body.app-body .app-service, body.app-body .app-detail-grid article { background: #fffdf9; border: 1px solid #ded8ce; border-radius: 0; box-shadow: none; color: #173b36; }
+body.app-body .app-service:nth-child(1), body.app-body .app-detail-grid article:nth-child(1) { background: #173b36; color: #f7f3eb; }
+body.app-body .app-service:nth-child(2), body.app-body .app-detail-grid article:nth-child(2) { background: #b9dfd0; color: #173b36; }
+body.app-body .app-service:nth-child(3), body.app-body .app-detail-grid article:nth-child(3) { background: #fffdf9; color: #173b36; }
+body.app-body .app-service p, body.app-body .app-detail-grid article p { color: #66766d; }
+body.app-body .app-service:nth-child(1) p, body.app-body .app-detail-grid article:nth-child(1) p { color: #c9d8d0; }
+body.app-body .app-service:nth-child(2) p, body.app-body .app-detail-grid article:nth-child(2) p { color: #285950; }
+body.app-body .app-service::after, body.app-body .app-detail-grid article::after { border-color: rgba(23,59,54,.16); }
+body.app-body .app-callout { background: #285950; border-radius: 0; box-shadow: none; }
+body.app-body .app-callout h2 { color: #f7f3eb; }
+body.app-body .app-callout .app-eyebrow { color: #b9dfd0; }
+body.app-body .app-button-light { background: #ef8d68; }
+body.app-body .app-page { background: #f7f3eb; }
+body.app-body .app-page::before { background: #b9dfd0; }
+body.app-body .app-page > .app-eyebrow::before { background: #ef8d68; }
+body.app-body .app-page > .app-lead { color: #66766d; }
+body.app-body .app-process li, body.app-body .app-resource-list article { background: #fffdf9; border-color: #ded8ce; }
+body.app-body .app-process li:hover, body.app-body .app-resource-list article:hover { background: #b9dfd0; }
+body.app-body .app-process li > span, body.app-body .app-resource-list article > span { color: #d26f4c; }
+body.app-body .app-metrics div { background: #173b36; box-shadow: none; }
+body.app-body .app-metrics strong { color: #ef8d68; }
+body.app-body .app-form { background: #fffdf9; border: 1px solid #ded8ce; box-shadow: none; }
+body.app-body .app-form input, body.app-body .app-form textarea { background: #f7f3eb; border-bottom-color: #b8c5bd; }
+body.app-body .app-footer { background: transparent; border-color: #ded8ce; color: #6d7770; }
+@media (max-width: 760px) { body.app-body .app-hero { background: #173b36; } body.app-body .app-page::before { background: #b9dfd0; } }
+/* Final composition and motion */
+body.app-body main { animation: page-in .55s ease both; }
+@keyframes page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+body.app-body .app-hero { box-shadow: inset 0 -1px 0 rgba(23,33,29,.08); }
+body.app-body .app-hero .app-lead { color: #43564a; }
+body.app-body .app-actions .app-button, body.app-body .app-callout .app-button { min-width: 190px; }
+body.app-body .app-service, body.app-body .app-detail-grid article { overflow: hidden; }
+body.app-body .app-service::after, body.app-body .app-detail-grid article::after { border: 1px solid rgba(255,255,255,.3); border-radius: 50%; content: ''; height: 115px; position: absolute; right: -42px; top: -42px; width: 115px; }
+body.app-body .app-service:nth-child(2)::after, body.app-body .app-detail-grid article:nth-child(2)::after { border-color: rgba(23,33,29,.16); }
+body.app-body .app-section-heading .app-link { white-space: nowrap; }
+body.app-body .app-page > .app-lead { color: #43564a; }
+body.app-body .app-resource-list article { background: rgba(255,255,255,.72); }
+body.app-body .app-footer { background: rgba(243,245,239,.65); }
+@media (prefers-reduced-motion: reduce) { body.app-body main { animation: none; } body.app-body .app-service, body.app-body .app-detail-grid article { transition: none; } }
 body.app-body .app-summary { background-image: linear-gradient(145deg, rgba(23,33,29,.92), rgba(38,72,48,.68)), url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85'); background-position: center; background-size: cover; min-height: 285px; }
 body.app-body .app-summary::after { border: 1px solid rgba(211,239,84,.55); border-radius: 50%; bottom: 24px; content: ''; height: 58px; position: absolute; right: 24px; transform: rotate(28deg); width: 30px; }
 body.app-body .app-summary::before { border-color: rgba(211,239,84,.35); }
