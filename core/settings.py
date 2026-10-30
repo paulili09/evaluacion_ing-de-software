@@ -39,6 +39,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'back-end-evaluacion-2-kohk.vercel.app',
+    'evaluacioning-de-software-fvwa.vercel.app',
     'localhost',
     '127.0.0.1'
 ]
