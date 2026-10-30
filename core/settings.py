@@ -8,6 +8,29 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Configuración híbrida segura:
+if os.environ.get('VERCEL'):
+    # En Vercel usamos la carpeta /tmp que sí permite lectura/escritura
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': '/tmp/db.postgres',
+        }
+    }
+else:
+    # En tu computadora local usamos la base de datos normal
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': BASE_DIR / 'db.postgres',  # Cambia esto a la ruta de tu base de datos local
+        }
+    }
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv(
