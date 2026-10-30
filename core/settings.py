@@ -38,6 +38,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'evaluacioning-de-software-12ut.vercel.app',
+    'evaluacioning-de-software-12ut.vercel.app',
     'localhost',
     '127.0.0.1'
 ]
