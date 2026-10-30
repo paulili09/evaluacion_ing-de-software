@@ -39,8 +39,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'back-end-evaluacion-2-kohk.vercel.app',
     'localhost',
-    '127.0.0.1',
-    '.vercel.app'
+    '127.0.0.1'
 ]
 
 
@@ -58,7 +57,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -66,7 +64,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 
 ROOT_URLCONF = 'core.urls'
 
@@ -138,7 +135,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 # Email
@@ -147,5 +143,5 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 MAILERS = {
     'default': {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
-},
+    },
 }
