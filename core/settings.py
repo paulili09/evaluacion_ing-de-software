@@ -37,7 +37,8 @@ SECRET_KEY = 'django-insecure-*3ro#sp5^id1c4p)gn+39d&eqqfhc1t&izwafckw621el4&#we
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'evaluacioning-de-software-fvwa.vercel.app'
+    'evaluacioning-de-software-fvwa.vercel.app',
+    '.vercel.app',
     'localhost',
     '127.0.0.1'
 ]
@@ -137,8 +138,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles_build'
 
 
 # Email
